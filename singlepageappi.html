@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline;
+  float: left;
+}
+a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#dddddd;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+li a:hover {
+  background-color: #111;
+}
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="home">Home</a></li>
+        <li><a href="news">News</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="about">About</a></li>
+      </ul>
+      
+
+<div class="products">
+    <ol id="new"></ol>
+</div>
+
+    <script>
+let pro=[{
+    name:"Mens Shoe",
+    price:1500,
+    image:"https://tse4.mm.bing.net/th?id=OIP.P002dynaWZMy8Ak-p4aiBgHaHa&pid=Api&P=0&h=180",
+
+},
+{
+    name:"Mens Shoe",
+    price:1150,
+    image:"https://tse2.mm.bing.net/th?id=OIP.lk6p0wdggUQItz8QwCHyIQHaHa&pid=Api&P=0&h=180",
+
+},
+{
+    name:"Mens Shoe",
+    price:2100,
+    image:"https://guhaha.com/wp-content/uploads/2020/06/He5f00c726d3745e7bdd33fca39d3cea9m-1.jpg",
+
+},
+
+{
+    name:"Mens Shoe",
+    price:800,
+    image:"https://n1.sdlcdn.com/imgs/g/2/d/Puma-Men-Essential-Runner-IDP-SDL809099655-2-da162.jpeg",
+}]
+
+
+var imgElement = document.createElement("img");
+var products = document.getElementById("new");
+
+for(var i=0;i<pro.length;i++)
+{
+    products.innerHTML+=`<li>${pro[i].name}</li>
+    <img src=${pro[i].image} height=100px weigth=100px >
+   <h5>${pro[i].price}</h5>`
+}
+
+
+
+    </script>
+</body>
+</html>
